@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8SNGAH5Yu7HeHvovuzktgsA3IU/ZouvX28Uk5HdJNS4g8XyWQQf6G1944W8ZJFA93ahRSt/BmL4Z1oSFBcHxAQ==",
+  "dgSpecHash": "B11Gba5bfy4+ybfU4HK/7xuS2EtOQRDSpn/et4IDZyrSdhHvN2dI8OSMXVeGUw9M5DwTArxPYAq+sCmQ5kuzSQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\book_apps\\Ch01GuitarShop\\GuitarShop\\GuitarShop.csproj",
+  "projectFilePath": "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\GitTogo\\ClassProjects\\CH01GuitarShop\\GuitarShop\\GuitarShop.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

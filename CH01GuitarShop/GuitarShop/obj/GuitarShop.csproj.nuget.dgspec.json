@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\book_apps\\Ch01GuitarShop\\GuitarShop\\GuitarShop.csproj": {}
+    "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\GitTogo\\ClassProjects\\CH01GuitarShop\\GuitarShop\\GuitarShop.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\book_apps\\Ch01GuitarShop\\GuitarShop\\GuitarShop.csproj": {
+    "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\GitTogo\\ClassProjects\\CH01GuitarShop\\GuitarShop\\GuitarShop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\book_apps\\Ch01GuitarShop\\GuitarShop\\GuitarShop.csproj",
+        "projectUniqueName": "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\GitTogo\\ClassProjects\\CH01GuitarShop\\GuitarShop\\GuitarShop.csproj",
         "projectName": "GuitarShop",
-        "projectPath": "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\book_apps\\Ch01GuitarShop\\GuitarShop\\GuitarShop.csproj",
+        "projectPath": "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\GitTogo\\ClassProjects\\CH01GuitarShop\\GuitarShop\\GuitarShop.csproj",
         "packagesPath": "C:\\Users\\Patrick\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\book_apps\\Ch01GuitarShop\\GuitarShop\\obj\\",
+        "outputPath": "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\GitTogo\\ClassProjects\\CH01GuitarShop\\GuitarShop\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Patrick\\AppData\\Roaming\\NuGet\\NuGet.Config",

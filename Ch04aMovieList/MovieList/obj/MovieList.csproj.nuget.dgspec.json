@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\student_download\\book_apps\\Ch04aMovieList\\MovieList\\MovieList.csproj": {}
+    "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\GitTogo\\ClassProjects\\Ch04aMovieList\\MovieList\\MovieList.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\student_download\\book_apps\\Ch04aMovieList\\MovieList\\MovieList.csproj": {
+    "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\GitTogo\\ClassProjects\\Ch04aMovieList\\MovieList\\MovieList.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\student_download\\book_apps\\Ch04aMovieList\\MovieList\\MovieList.csproj",
+        "projectUniqueName": "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\GitTogo\\ClassProjects\\Ch04aMovieList\\MovieList\\MovieList.csproj",
         "projectName": "MovieList",
-        "projectPath": "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\student_download\\book_apps\\Ch04aMovieList\\MovieList\\MovieList.csproj",
+        "projectPath": "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\GitTogo\\ClassProjects\\Ch04aMovieList\\MovieList\\MovieList.csproj",
         "packagesPath": "C:\\Users\\Patrick\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\student_download\\book_apps\\Ch04aMovieList\\MovieList\\obj\\",
+        "outputPath": "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\GitTogo\\ClassProjects\\Ch04aMovieList\\MovieList\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Patrick\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -42,13 +42,13 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.6, )"
+              "version": "[7.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.6, )"
+              "version": "[7.0.4, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
