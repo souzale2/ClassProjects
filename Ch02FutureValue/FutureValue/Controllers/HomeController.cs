@@ -1,6 +1,7 @@
 ﻿using FutureValue.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Reflection;
 
 namespace FutureValue.Controllers
 {
@@ -16,9 +17,11 @@ namespace FutureValue.Controllers
         [HttpPost]
         public IActionResult Index(FutureValueModel model)
         {
+           
             if (ModelState.IsValid)
             {
                 ViewBag.FV = model.CalculateFutureValue();
+                
             }
             else
             {
