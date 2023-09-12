@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "V/JhpVT7Z9J/K/r+g4Vcp9nEvCevvSZB4PurX6R/Exu/Z95EpljXSL5Fmyt1endI2VXjjIREEQ8s85PtRzuE9A==",
+  "dgSpecHash": "IHOr5NXSW1g3NpvXhtnJJYxrZ6PD3D/jXerZMDJ/EtAW8KWIjybZhkY5mWIohQOLaGUYsovvbcdrdomv7WxDcg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\book_apps\\Ch02FutureValue\\FutureValue\\FutureValue.csproj",
+  "projectFilePath": "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\GitTogo\\ClassProjects\\Ch02FutureValue\\FutureValue\\FutureValue.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Patrick\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",
     "C:\\Users\\Patrick\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

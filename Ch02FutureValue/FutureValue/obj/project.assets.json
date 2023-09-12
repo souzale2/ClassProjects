@@ -8962,11 +8962,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\book_apps\\Ch02FutureValue\\FutureValue\\FutureValue.csproj",
+      "projectUniqueName": "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\GitTogo\\ClassProjects\\Ch02FutureValue\\FutureValue\\FutureValue.csproj",
       "projectName": "FutureValue",
-      "projectPath": "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\book_apps\\Ch02FutureValue\\FutureValue\\FutureValue.csproj",
+      "projectPath": "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\GitTogo\\ClassProjects\\Ch02FutureValue\\FutureValue\\FutureValue.csproj",
       "packagesPath": "C:\\Users\\Patrick\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\book_apps\\Ch02FutureValue\\FutureValue\\obj\\",
+      "outputPath": "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\GitTogo\\ClassProjects\\Ch02FutureValue\\FutureValue\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Patrick\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9019,7 +9019,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,7 +1,15 @@
+using GuitarShop.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+
+//Add EF Core DI
+builder.Services.AddDbContext<ContextCoordinates>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ContextCoordinates")));
 
 var app = builder.Build();
 
