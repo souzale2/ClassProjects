@@ -7,24 +7,23 @@ namespace FutureValue.Models
     public class FutureValueModel
     {
 
-        int outputleft = 0;
-        int outputRight = 0;
+        int? outputleft = 0;
+        int? outputRight = 0;
         public FutureValueModel() {
             var (rootLeft, rootRight) = Createtree();
 
-            print(rootLeft);
+            //Debug1
+            Build();
 
-            Thread mySecondThread = new Thread(() => TraverseIn(rootLeft));
-            Thread myThirdThread = new Thread(() => TraversePost(rootLeft));
-            mySecondThread.Start();
-            myThirdThread.Start();
+            string thisnothing = "";
+
+            //Thread mySecondThread = new Thread(() => TraverseIn(rootLeft));
+            //Thread myThirdThread = new Thread(() => TraversePost(rootLeft));
+            //mySecondThread.Start();
+            //myThirdThread.Start();
         }
 
-        public void print(TreeNode root)
-        {
-            TraverseIn(root);
-            TraversePost(root);
-        }
+        
 
         [Required(ErrorMessage = "Please enter a monthly investment.")]
         [Range(1, 500, ErrorMessage =
@@ -56,6 +55,8 @@ namespace FutureValue.Models
 
         public  class TreeNode
         {
+            private static int _globalId = 0;
+            public int ID { get; set; }
             public int value { get; set; }
             public TreeNode? left { get; set; }
             public TreeNode? right { get; set; }
@@ -64,6 +65,7 @@ namespace FutureValue.Models
 
             public TreeNode(int value, TreeNode? left = null, TreeNode? right = null)
             {
+                ID = _globalId++;
                 this.value = value;
                 this.left = left;
                 this.right = right;
@@ -155,5 +157,89 @@ namespace FutureValue.Models
             return (RootNodeLeft, RootNodeRight) ;
 
         }
+
+
+        /// <summary>
+        /// Debug Exercises:
+        /// 1. Find The ID of nodes with values {65, 68, 90)
+        ///    a) using the immediate window, what are is the ID 68 when mult by *34/5%4 equal to?
+        /// 2. What are the node values when breakpoint at line 192 gets hit 80 times
+        /// 3. without adding any code to the PrintInOrder method, print all values of the BrinaryTree 
+        /// to the output window. Do you have the min value of 40, and the max value of 200?
+        /// </summary>
+        public TreeNode Root { get; private set; }
+
+        private void Build()
+        {
+            int x = 40, y = 200;
+            BinarySearchTree bst = new BinarySearchTree();
+
+            for (int i = x; i <= y; i++)
+            {
+                bst.Insert(i); // Just insert value; ID is auto-generated
+            }
+
+            // For visualization purposes, let's print the tree in-order
+            PrintInOrder(bst.Root);
+        }
+
+
+        //Focus on this method***************************************************************
+        public List<int> myintlist = new List<int>();
+        private void PrintInOrder(TreeNode node)
+        {
+            if (node != null)
+            {
+                PrintInOrder(node.left);
+                outputRight = node.value;
+
+                PrintInOrder(node.right);
+            }
+        }
+        //************************************************************************************
+        public class BinarySearchTree
+        {
+            public TreeNode Root { get; private set; }
+
+            public void Insert(int value)
+            {
+                TreeNode newNode = new TreeNode(value); // No need to pass ID; it's auto-generated
+
+                if (Root == null)
+                {
+                    Root = newNode;
+                    return;
+                }
+
+                TreeNode current = Root;
+                TreeNode parent = null;
+
+                while (true)
+                {
+                    parent = current;
+                    if (value < current.value)
+                    {
+                        current = current.left;
+                        if (current == null)
+                        {
+                            parent.left = newNode;
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        current = current.right;
+                        if (current == null)
+                        {
+                            parent.right = newNode;
+                            return;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        ///In the below area of code write The ABCS to the Output window. then use this method in public FutureValueModel(), to activate it.
     }
 }
