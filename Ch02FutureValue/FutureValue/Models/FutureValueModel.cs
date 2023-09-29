@@ -1,6 +1,6 @@
 using Microsoft.CodeAnalysis;
 using System.ComponentModel.DataAnnotations;
-
+using System.Text;
 
 namespace FutureValue.Models
 {
@@ -10,6 +10,21 @@ namespace FutureValue.Models
         int? outputleft = 0;
         int? outputRight = 0;
         public FutureValueModel() {
+
+            //Demonstation
+            
+            var myString = new StringBuilder("Glorious Embrance");
+            while(myString.Length > 3)
+            {
+                myString.Remove(myString.Length - 1, 1);
+            }
+
+
+
+
+
+
+            //Build tree and return both roots
             var (rootLeft, rootRight) = Createtree();
 
             //Debug1
@@ -17,10 +32,14 @@ namespace FutureValue.Models
 
             string thisnothing = "";
 
+
             //Thread mySecondThread = new Thread(() => TraverseIn(rootLeft));
             //Thread myThirdThread = new Thread(() => TraversePost(rootLeft));
+            //mySecondThread.Name = "MySecondThead";
+            //myThirdThread.Name = "MyThirdThead";
             //mySecondThread.Start();
             //myThirdThread.Start();
+            PrintABCs();
         }
 
         
@@ -72,7 +91,8 @@ namespace FutureValue.Models
             }
         }
 
-        
+        private static readonly object syncLock = new object();
+        private static int? sharedValue = null;  // Assuming value is of type int
 
         //inorder
         public void TraverseIn( TreeNode? root )
@@ -87,6 +107,18 @@ namespace FutureValue.Models
             outputleft = root.value;
             TraverseIn(root.right);
 
+            lock (syncLock)
+            {
+                if (sharedValue.HasValue && sharedValue.Value == root.value)
+                {
+                    // The value of root in TraversePost is the same as in TraverseIn
+                    var caught = $"Value {root.value} is the same in both threads!";
+                }
+                else
+                {
+                    sharedValue = root.value;
+                }
+            }
         }
 
         //postorder
@@ -101,6 +133,19 @@ namespace FutureValue.Models
             TraversePost(root.left);
             TraversePost(root.right);
             outputRight = root.value;
+
+            lock (syncLock)
+            {
+                if (sharedValue.HasValue && sharedValue.Value == root.value)
+                {
+                    // The value of root in TraversePost is the same as in TraverseIn
+                    var caught = $"Value {root.value} is the same in both threads!";
+                }
+                else
+                {
+                    sharedValue = root.value;
+                }
+            }
 
         }
         public (TreeNode?, TreeNode?) Createtree()
@@ -241,5 +286,14 @@ namespace FutureValue.Models
 
 
         ///In the below area of code write The ABCS to the Output window. then use this method in public FutureValueModel(), to activate it.
+
+        public void PrintABCs()
+        {
+            for (char letter = 'A'; letter <= 'Z'; letter++)
+            {
+                //Nope!!!   not using Console.WriteLine
+                var myLetter = letter;
+            }
+        }
     }
 }

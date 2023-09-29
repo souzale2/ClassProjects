@@ -16,3 +16,24 @@
         </div>
     </div>
 </div>
+
+<label>Selected Item from items group</label>
+<a asp-controller="Product" asp-action="List" asp-route-id="Guitars"
+   class="list-group-item
+                         @(ViewBag.SelectedCategoryName == "Guitars" ? "active" : "")">
+    Guitars
+</a>
+<a asp-controller="Product" asp-action="List" asp-route-id="Basses"
+   class="list-group-item
+                         @(ViewBag.SelectedCategoryName == "Basses" ? "active" : "")">
+    Basses
+</a>
+<a asp-controller="Product" asp-action="List" asp-route-id="Drums"
+   class="list-group-item
+                         @(ViewBag.SelectedCategoryName == "Drums" ? "active" : "")">
+    Drums
+</a>
+
+<form asp-controller="Home" asp-action="Index" >
+    <select name="category" onchange="this.form.submit();" asp-items="@( new SelectList(ViewBag.Categories, ViewBag.SelectedCategoryName))"></select>
+</form>

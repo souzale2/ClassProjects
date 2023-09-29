@@ -32,6 +32,10 @@ app.MapAreaControllerRoute(
     areaName: "Admin",
     pattern: "Admin/{controller=Home}/{action=Index}/{id?}");
 
+app.MapControllerRoute(
+    name: "NewOne",
+    pattern: "{controller=Home}/{action=Index}/{category}");
+
 // map default route
 app.MapControllerRoute(
     name: "default",

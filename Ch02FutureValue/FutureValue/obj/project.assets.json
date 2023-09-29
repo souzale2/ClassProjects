@@ -8957,24 +8957,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\patrick.lemos\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Patrick\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\patrick.lemos\\OneDrive - The Vollrath Company, LLC\\Desktop\\ClassRoomCode\\ClassProjects\\Ch02FutureValue\\FutureValue\\FutureValue.csproj",
+      "projectUniqueName": "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\GitTogo\\ClassProjects\\Ch02FutureValue\\FutureValue\\FutureValue.csproj",
       "projectName": "FutureValue",
-      "projectPath": "C:\\Users\\patrick.lemos\\OneDrive - The Vollrath Company, LLC\\Desktop\\ClassRoomCode\\ClassProjects\\Ch02FutureValue\\FutureValue\\FutureValue.csproj",
-      "packagesPath": "C:\\Users\\patrick.lemos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\patrick.lemos\\OneDrive - The Vollrath Company, LLC\\Desktop\\ClassRoomCode\\ClassProjects\\Ch02FutureValue\\FutureValue\\obj\\",
+      "projectPath": "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\GitTogo\\ClassProjects\\Ch02FutureValue\\FutureValue\\FutureValue.csproj",
+      "packagesPath": "C:\\Users\\Patrick\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Patrick\\Desktop\\aspnet_core_mvc\\GitTogo\\ClassProjects\\Ch02FutureValue\\FutureValue\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\patrick.lemos\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Patrick\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
