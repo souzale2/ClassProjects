@@ -18,8 +18,13 @@ namespace GuitarShop.Controllers
         {
             ViewBag.Categories = new List<string>() { "Guitars", "Basses", "Drums" };
             ViewBag.SelectedCategoryName = category;
-
+            ViewData["book"] = category;
             return View();
+        }
+
+        public IActionResult Trial()
+        {
+            return View((object) new List<int>() { 1,2,3});
         }
 
         [Route("[action]")]
