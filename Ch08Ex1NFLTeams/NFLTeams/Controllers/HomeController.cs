@@ -36,6 +36,11 @@ namespace NFLTeams.Controllers
 
         public ViewResult Details(string id)
         {
+            var isItAlive = ViewBag.InViewBag;
+            var isItAlive1 = ViewData["InViewData"];
+            var isItAlive2 = TempData["InTempData"];
+            var isItAlive3 = TempData["InTempData"];
+
             // get current conference and division from session
             // and pass them to the view in the view model
             var session = new NFLSession(HttpContext.Session);
@@ -49,6 +54,36 @@ namespace NFLTeams.Controllers
                 ActiveConf = session.GetActiveConf()
             };
             return View(model);
+        }
+
+        public ViewResult Test()
+        {
+            ViewBag.InViewBag = "InViewBag";
+            ViewData["InViewData"] = "InViewData";
+            TempData["InTempData"] = "InTempData";
+
+            ViewBag.Teams = context.Teams.OrderBy(o => o.Name).ToList();
+            return View();
+        }
+
+        [Route("ToDiffSite/{website}")]
+        public RedirectResult Test(string website)
+        {
+            return Redirect("https://" + website);
+        
+
+        }
+        
+        [Route("{action}/{method}/{id?}")]
+        public RedirectToActionResult Site(int method, string id = "ari")
+        {
+
+            ViewBag.InViewBag = "InViewBag";
+            ViewData["InViewData"] = "InViewData";
+            TempData["InTempData"] = "InTempData";
+
+            var smethodAndController = (method == 1) ? ("Index", "Favorites") : ("Details", "Home");
+            return RedirectToAction(smethodAndController.Item1, smethodAndController.Item2, new {id = id});
         }
 
     }
