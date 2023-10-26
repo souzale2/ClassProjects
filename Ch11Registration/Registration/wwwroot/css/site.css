@@ -1,0 +1,16 @@
+.input-validation-error {
+    border: 2px solid #dc3545; /* same red as text-danger */
+    background-color: #faebd7; /* antique white */
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+?
+
+?
+
+.validation-summary-errors ul {
+    list-style: none;
+}

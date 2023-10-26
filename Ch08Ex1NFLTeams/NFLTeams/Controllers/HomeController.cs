@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NFLTeams.Models;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
+using System.Text.Json;
 
 namespace NFLTeams.Controllers
 {
@@ -11,6 +14,7 @@ namespace NFLTeams.Controllers
 
         public ViewResult Index(TeamsViewModel model)
         {
+            TempData["TeamID"] = Request.Cookies["TeamID"];
             // store active conference and division in session
             var session = new NFLSession(HttpContext.Session);
             session.SetActiveConf(model.ActiveConf);
@@ -56,15 +60,22 @@ namespace NFLTeams.Controllers
             return View(model);
         }
 
+       
+
         public ViewResult Test()
         {
-            ViewBag.InViewBag = "InViewBag";
-            ViewData["InViewData"] = "InViewData";
-            TempData["InTempData"] = "InTempData";
+            
+            var myTeam =  context.Teams.OrderBy(o => o.Name).Select(x => new ShortTeam{ TeamID = x.TeamID, Name = x.Name} ).Take(10).ToList();
+            
+            HttpContext.Session.SetObject("num", myTeam);
 
-            ViewBag.Teams = context.Teams.OrderBy(o => o.Name).ToList();
+            //Response.Cookies.Append("TeamID", "ari");
+
+
             return View();
         }
+
+
 
         [Route("ToDiffSite/{website}")]
         public RedirectResult Test(string website)

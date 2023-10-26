@@ -9,8 +9,9 @@ namespace ToDoList.Controllers
         private ToDoContext context;
         public HomeController(ToDoContext ctx) => context = ctx;
 
-        public ViewResult Index(string id)
+        public ViewResult Index(string name)
         {
+            string id = name;
             // load current filters and data needed for filter drop downs in ViewBag
             var filters = new Filters(id);
             ViewBag.Filters = filters;

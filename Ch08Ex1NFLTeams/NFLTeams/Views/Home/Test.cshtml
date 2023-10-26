@@ -2,33 +2,31 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+
+
+    @using System.Text.Json
+
+    //get string from httpContext
+    var deserializeTeam = Context.Session.GetObject<List<ShortTeam>>("num");
+
 }
 @model IEnumerable<Team>;
 
-<h4>@ViewBag.InViewData</h4>
-<h4>@ViewData["InViewBag"]</h4>
-<h4>@TempData["InTempData"]</h4>
-<h4>@TempData["InTempData"]</h4>
-</br>
-keys
-@ViewData["life"]; ????? what happens?
+<p>This is the Cookie data: @TempData["TeamID"]</p>
 
-@ViewBag.Life.ToString()
 
-</br>
-values
-@ViewData.Values
+<h3>This from our context class: @Context.Session.GetInt32("num")</h3>
 
-<div class="col-sm-9">
+
+
+<div class="col-sm-5">
     <ul class="list-inline">
-        @foreach (Team team in ViewBag.Teams)
+        @foreach (var team in deserializeTeam)
         {
-            <li class="list-inline-item">
-                <a asp-action="Details" asp-route-id="@Model.">
-                    <img src="~/images/@team.LogoImage" alt="@team.Name"
-                         title="@team.Name " />
-                </a>
-            </li>
+            
+                <p> TeamID: @team.TeamID</p>
+                <p> Team Name: @team.Name</p>
+            
         }
     </ul>
 </div>

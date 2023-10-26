@@ -1,0 +1,95 @@
+﻿@model Customer
+@{
+    ViewBag.Title = "Registration";
+}
+
+@section scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/js/minimum-age.js"></script>
+    <script src="~/js/CharactersAName.js"></script>
+}
+
+<form asp-action="Index" method="post">
+    <div class="row mb-2">
+        <label asp-for="Username" class="col-form-label col-md-2"></label>
+        <div class="col-md-4">
+            <input asp-for="Username" class="form-control" />
+        </div>
+        <div class="col">
+            <span asp-validation-for="Username" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row mb-2">
+        <label asp-for="EmailAddress" class="col-form-label col-md-2"></label>
+       <div class="col-md-4">
+            <input asp-for="EmailAddress" class="form-control" />
+        </div>
+        <div class="col">
+            <span asp-validation-for="EmailAddress" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row mb-2">
+        <label asp-for="DOB" class="col-form-label col-md-2"></label>
+        <div class="col-md-4">
+            <input asp-for="DOB" class="form-control" type="text" />
+        </div>
+        <div class="col">
+            <span asp-validation-for="DOB" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <label asp-for="Password" class="col-form-label col-md-2"></label>
+        <div class="col-md-4">
+            <input asp-for="Password" class="form-control" type="password" />
+        </div>
+        <div class="col">
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <label asp-for="ConfirmPassword" class="col-form-label col-md-2"></label>
+        <div class="col-md-4">
+            <input asp-for="ConfirmPassword" class="form-control" type="password" />
+        </div>
+        <div class="col">
+            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+        </div>
+    </div>
+
+
+    <div class="row mb-2 flex">
+        <label class="col-form-label col-md-2" for="Experimental">Experimental</label>
+        <div class="col-md-4">
+            <input class="form-control" 
+                type="text" 
+                    data-val="true" 
+                    data-val-length="The field Experimental must be a string with a maximum length of 10." 
+                    data-val-length-max="10" 
+                    data-val-regex="needs to contain Patrick" 
+                    data-val-regex-pattern=".*Patrick.*" 
+                    data-val-required="Please enter an Experimental."
+
+                   @* data-val-remote="Experimental field got checked against the database"
+                    data-val-remote-url="/Validataion/CheckEmail"
+                    data-val-remote-additionalfields="*.EmailAddress" *@
+
+                    id="Experimental" maxlength="10" name="Experimental" value>
+        </div>
+        <div class="col">
+            <span class="text-danger field-validation-valid" data-valmsg-for="Experimental" data-valmsg-replace="true"></span>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="offset-md-2 col">
+            <button type="submit" class="btn btn-primary">Register</button>
+        </div>
+    </div>
+
+
+
+</form>
